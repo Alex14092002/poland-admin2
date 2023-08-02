@@ -285,16 +285,18 @@
               <h3>${t.quantity}</h3>
             </td>
             <td>
-              <h3>${t.price} </h3>
+              <h3>${parseInt(t.Singleprice) * parseInt(t.quantity)} </h3>
             </td>
 
             `
-          })
-          if(data.total >= 1000){
+
+            if(parseInt(t.Singleprice) * parseInt(t.quantity) >= 1000){
             vanchuyen = 0
           } else{
             vanchuyen = 40
           }
+          })
+        
           total.innerHTML += `
           <tr>
             <td>Phí vận chuyển : zl</td>
